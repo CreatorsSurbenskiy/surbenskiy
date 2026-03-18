@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURBENSKIY 8.5 - Пред-релиз | Набор тестеров</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #1a1a1a;
+            padding: 20px 0;
+            border-bottom: 3px solid #4CAF50;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo h1 {
+            color: #4CAF50;
+            font-size: 2em;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #4CAF50;
+        }
+        
+        .hero {
+            padding: 80px 0 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        }
+        
+        .hero h2 {
+            font-size: 3em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #cccccc;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #45a049;
+        }
+        
+        .warning-box {
+            background-color: #332200;
+            border-left: 4px solid #ffaa00;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 5px;
+        }
+        
+        .tester-box {
+            background-color: #1a3a1a;
+            border-left: 4px solid #4CAF50;
+            padding: 25px;
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .tester-box h3 {
+            color: #4CAF50;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .tester-box p {
+            color: #cccccc;
+            margin-bottom: 20px;
+        }
+        
+        .vk-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s;
+        }
+        
+        .vk-btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        
+        .features {
+            padding: 60px 0;
+            background-color: #0f0f0f;
+        }
+        
+        .features h3 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #4CAF50;
+            margin-bottom: 50px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h4 {
+            color: #4CAF50;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            color: #cccccc;
+        }
+        
+        .download {
+            padding: 60px 0;
+            background-color: #1a1a1a;
+            text-align: center;
+        }
+        
+        .download h3 {
+            font-size: 2.5em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        
+        .version-info {
+            margin-top: 20px;
+            color: #ffaa00;
+            font-weight: bold;
+        }
+        
+        .version-detail {
+            color: #888888;
+            margin-top: 5px;
+        }
+        
+        footer {
+            background-color: #0a0a0a;
+            padding: 40px 0;
+            border-top: 1px solid #333;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-links a {
+            color: #cccccc;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #4CAF50;
+        }
+        
+        .copyright {
+            color: #888888;
+            font-size: 0.9em;
+        }
+        
+        .warning-text {
+            color: #666666;
+            margin-top: 20px;
+            font-size: 0.8em;
+            text-align: center;
+        }
+        
+        .badge {
+            background-color: #4CAF50;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span style="font-size: 2em;">🛡️</span>
+                    <h1>SURBENSKIY</h1>
+                    <span class="badge">8.5 PRE-RELEASE</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#features">Возможности</a></li>
+                        <li><a href="#download">Скачать</a></li>
+                        <li><a href="#testers">Тестерам</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>🛡️ SURBENSKIY 8.5</h2>
+            <p>Бесплатный антивирус с уникальными функциями. Создан с душой.</p>
+            
+            <div class="warning-box">
+                <p style="color: #ffaa00; font-weight: bold;">⚠️ ВЕРСИЯ 8.5 — ПРЕД-РЕЛИЗ ПЕРЕД 1.0</p>
+                <p style="color: #cccccc; margin-top: 10px;">Это тестовая версия. Возможны баги и недоработки.</p>
+            </div>
+            
+            <a href="#download" class="btn">СКАЧАТЬ SURBENSKIY 8.5</a>
+        </div>
+    </section>
+    
+    <section class="tester-box" id="testers">
+        <div class="container">
+            <h3>👥 ТРЕБУЮТСЯ ТЕСТЕРЫ!</h3>
+            <p>Помоги нам сделать SURBENSKIY лучше! Мы ищем активных пользователей, которые помогут протестировать пред-релизную версию 8.5 перед выходом стабильного 1.0.</p>
+            <p style="color: #4CAF50; font-weight: bold;">Что нужно делать:</p>
+            <p>✅ Тестировать функции<br>✅ Сообщать о багах<br>✅ Предлагать идеи</p>
+            <p style="margin-top: 20px;">👉 Если хочешь стать тестером — заходи в нашу группу ВК!</p>
+            <a href="#" class="vk-btn" target="_blank">🚀 ВСТУПИТЬ В ГРУППУ ТЕСТЕРОВ</a>
+            <p style="margin-top: 15px; color: #888888;">Ссылка на ВК появится после создания группы</p>
+        </div>
+    </section>
+    
+    <section class="features" id="features">
+        <div class="container">
+            <h3>Возможности SURBENSKIY 8.5</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h4>Умное сканирование</h4>
+                    <p>Находит реальные угрозы, игнорируя безопасные файлы</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧹</div>
+                    <h4>Очистка системы</h4>
+                    <p>Удаляет мусор, освобождая место на диске</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h4>Управление процессами</h4>
+                    <p>Следи за тем, что работает в системе</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h4>Сетевые утилиты</h4>
+                    <p>Проверка соединений и сброс DNS</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👤</div>
+                    <h4>Система аккаунтов</h4>
+                    <p>Личные настройки для каждого пользователя</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h4>5 тем оформления</h4>
+                    <p>Выбирай под своё настроение</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="download" id="download">
+        <div class="container">
+            <h3>Готов тестировать?</h3>
+            <p>SURBENSKIY 8.5 — пред-релизная версия. Полностью бесплатно.</p>
+            <a href="#" class="btn">⬇️ СКАЧАТЬ SURBENSKIY 8.5</a>
+            <p class="version-info">⚠️ Версия 8.5 — ПРЕД-РЕЛИЗ (тестовая)</p>
+            <p class="version-detail">Windows 10/11 | Размер: ~30 МБ</p>
+            <p style="margin-top: 30px; color: #4CAF50;">
+                👥 Хотите протестировать SURBENSKIY? 
+                <a href="#" style="color: #ffffff; background-color: #4CAF50; padding: 5px 15px; border-radius: 20px; text-decoration: none; margin-left: 10px;">
+                    ЗАЙТИ В ВК
+                </a>
+            </p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">🛡️ 2026 SURBENSKIY. Все права защищены.</div>
+                <div class="footer-links">
+                    <a href="#" target="_blank">ВКонтакте</a>
+                    <a href="#">Telegram</a>
+                </div>
+            </div>
+            <p class="warning-text">
+                ⚠️ Версия 8.5 — пред-релиз. Возможны баги. Стабильный релиз 1.0 выйдет позже.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
