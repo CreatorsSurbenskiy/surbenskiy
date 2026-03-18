@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SURBENSKIY - Защита, которой можно доверять</title>
+    <title>SURBENSKIY 8.5 - Пред-релиз | Набор тестеров</title>
     <style>
         * {
             margin: 0;
@@ -28,6 +28,9 @@
             background-color: #1a1a1a;
             padding: 20px 0;
             border-bottom: 3px solid #4CAF50;
+        }
+        
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -61,7 +64,7 @@
         }
         
         .hero {
-            padding: 100px 0;
+            padding: 80px 0 40px;
             text-align: center;
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
         }
@@ -94,8 +97,55 @@
             background-color: #45a049;
         }
         
+        .warning-box {
+            background-color: #332200;
+            border-left: 4px solid #ffaa00;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 5px;
+        }
+        
+        .tester-box {
+            background-color: #1a3a1a;
+            border-left: 4px solid #4CAF50;
+            padding: 25px;
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .tester-box h3 {
+            color: #4CAF50;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .tester-box p {
+            color: #cccccc;
+            margin-bottom: 20px;
+        }
+        
+        .vk-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s;
+        }
+        
+        .vk-btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        
         .features {
-            padding: 80px 0;
+            padding: 60px 0;
             background-color: #0f0f0f;
         }
         
@@ -140,7 +190,7 @@
         }
         
         .download {
-            padding: 80px 0;
+            padding: 60px 0;
             background-color: #1a1a1a;
             text-align: center;
         }
@@ -151,27 +201,15 @@
             margin-bottom: 20px;
         }
         
-        .download p {
-            font-size: 1.2em;
-            margin-bottom: 40px;
-            color: #cccccc;
-        }
-        
-        .download-btn {
-            display: inline-block;
-            padding: 20px 60px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
+        .version-info {
+            margin-top: 20px;
+            color: #ffaa00;
             font-weight: bold;
-            font-size: 1.5em;
-            transition: all 0.3s;
         }
         
-        .download-btn:hover {
-            background-color: #45a049;
-            transform: scale(1.05);
+        .version-detail {
+            color: #888888;
+            margin-top: 5px;
         }
         
         footer {
@@ -202,42 +240,73 @@
             font-size: 0.9em;
         }
         
-        .warning {
+        .warning-text {
             color: #666666;
             margin-top: 20px;
             font-size: 0.8em;
             text-align: center;
+        }
+        
+        .badge {
+            background-color: #4CAF50;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">
-                <span style="font-size: 2em;">🛡️</span>
-                <h1>SURBENSKIY</h1>
+            <div class="header-content">
+                <div class="logo">
+                    <span style="font-size: 2em;">🛡️</span>
+                    <h1>SURBENSKIY</h1>
+                    <span class="badge">8.5 PRE-RELEASE</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#features">Возможности</a></li>
+                        <li><a href="#download">Скачать</a></li>
+                        <li><a href="#testers">Тестерам</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Главная</a></li>
-                    <li><a href="#features">Возможности</a></li>
-                    <li><a href="#download">Скачать</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
     
     <section class="hero" id="home">
         <div class="container">
-            <h2>🛡️ SURBENSKIY</h2>
+            <h2>🛡️ SURBENSKIY 8.5</h2>
             <p>Бесплатный антивирус с уникальными функциями. Создан с душой.</p>
-            <a href="#download" class="btn">СКАЧАТЬ SURBENSKIY 1.0</a>
+            
+            <div class="warning-box">
+                <p style="color: #ffaa00; font-weight: bold;">⚠️ ВЕРСИЯ 8.5 — ПРЕД-РЕЛИЗ ПЕРЕД 1.0</p>
+                <p style="color: #cccccc; margin-top: 10px;">Это тестовая версия. Возможны баги и недоработки.</p>
+            </div>
+            
+            <a href="#download" class="btn">СКАЧАТЬ SURBENSKIY 8.5</a>
+        </div>
+    </section>
+    
+    <section class="tester-box" id="testers">
+        <div class="container">
+            <h3>👥 ТРЕБУЮТСЯ ТЕСТЕРЫ!</h3>
+            <p>Помоги нам сделать SURBENSKIY лучше! Мы ищем активных пользователей, которые помогут протестировать пред-релизную версию 8.5 перед выходом стабильного 1.0.</p>
+            <p style="color: #4CAF50; font-weight: bold;">Что нужно делать:</p>
+            <p>✅ Тестировать функции<br>✅ Сообщать о багах<br>✅ Предлагать идеи</p>
+            <p style="margin-top: 20px;">👉 Если хочешь стать тестером — заходи в нашу группу ВК!</p>
+            <a href="#" class="vk-btn" target="_blank">🚀 ВСТУПИТЬ В ГРУППУ ТЕСТЕРОВ</a>
+            <p style="margin-top: 15px; color: #888888;">Ссылка на ВК появится после создания группы</p>
         </div>
     </section>
     
     <section class="features" id="features">
         <div class="container">
-            <h3>Возможности</h3>
+            <h3>Возможности SURBENSKIY 8.5</h3>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🔍</div>
@@ -275,10 +344,17 @@
     
     <section class="download" id="download">
         <div class="container">
-            <h3>Готов защищать?</h3>
-            <p>SURBENSKIY 1.0 - полностью бесплатно, без скрытых платежей</p>
-            <a href="#" class="download-btn">⬇️ СКАЧАТЬ</a>
-            <p style="margin-top: 20px; color: #888888;">Версия 1.0 | Windows 10/11 | 30 МБ</p>
+            <h3>Готов тестировать?</h3>
+            <p>SURBENSKIY 8.5 — пред-релизная версия. Полностью бесплатно.</p>
+            <a href="#" class="btn">⬇️ СКАЧАТЬ SURBENSKIY 8.5</a>
+            <p class="version-info">⚠️ Версия 8.5 — ПРЕД-РЕЛИЗ (тестовая)</p>
+            <p class="version-detail">Windows 10/11 | Размер: ~30 МБ</p>
+            <p style="margin-top: 30px; color: #4CAF50;">
+                👥 Хотите протестировать SURBENSKIY? 
+                <a href="#" style="color: #ffffff; background-color: #4CAF50; padding: 5px 15px; border-radius: 20px; text-decoration: none; margin-left: 10px;">
+                    ЗАЙТИ В ВК
+                </a>
+            </p>
         </div>
     </section>
     
@@ -287,12 +363,12 @@
             <div class="footer-content">
                 <div class="copyright">🛡️ 2026 SURBENSKIY. Все права защищены.</div>
                 <div class="footer-links">
+                    <a href="#" target="_blank">ВКонтакте</a>
                     <a href="#">Telegram</a>
-                    <a href="#">ВКонтакте</a>
                 </div>
             </div>
-            <p class="warning">
-                ВНИМАНИЕ! Официальный сайт SURBENSKIY. Скачивайте программу только отсюда.
+            <p class="warning-text">
+                ⚠️ Версия 8.5 — пред-релиз. Возможны баги. Стабильный релиз 1.0 выйдет позже.
             </p>
         </div>
     </footer>
