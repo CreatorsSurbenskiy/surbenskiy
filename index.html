@@ -34,6 +34,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         
         .logo {
@@ -45,6 +47,15 @@
         .logo h1 {
             color: #4CAF50;
             font-size: 2em;
+        }
+        
+        .badge {
+            background-color: #4CAF50;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-left: 10px;
         }
         
         nav ul {
@@ -212,6 +223,23 @@
             margin-top: 5px;
         }
         
+        .vk-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: #4c75a3;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .vk-link:hover {
+            background-color: #5d8cba;
+            transform: scale(1.05);
+        }
+        
         footer {
             background-color: #0a0a0a;
             padding: 40px 0;
@@ -222,6 +250,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         
         .footer-links a {
@@ -247,13 +277,24 @@
             text-align: center;
         }
         
-        .badge {
-            background-color: #4CAF50;
-            color: white;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            margin-left: 10px;
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links a {
+                margin: 0 10px;
+            }
         }
     </style>
 </head>
@@ -299,8 +340,7 @@
             <p style="color: #4CAF50; font-weight: bold;">Что нужно делать:</p>
             <p>✅ Тестировать функции<br>✅ Сообщать о багах<br>✅ Предлагать идеи</p>
             <p style="margin-top: 20px;">👉 Если хочешь стать тестером — заходи в нашу группу ВК!</p>
-            <a href="#" class="vk-btn" target="_blank">🚀 ВСТУПИТЬ В ГРУППУ ТЕСТЕРОВ</https://vk.com/club236789529>
-            <p style="margin-top: 15px; color: #888888;">Ссылка на ВК появится после создания группы</p>
+            <a href="https://vk.com/club236789529" class="vk-btn" target="_blank">🚀 ВСТУПИТЬ В ГРУППУ ТЕСТЕРОВ</a>
         </div>
     </section>
     
@@ -349,12 +389,10 @@
             <a href="#" class="btn">⬇️ СКАЧАТЬ SURBENSKIY 8.5</a>
             <p class="version-info">⚠️ Версия 8.5 — ПРЕД-РЕЛИЗ (тестовая)</p>
             <p class="version-detail">Windows 10/11 | Размер: ~30 МБ</p>
-            <p style="margin-top: 30px; color: #4CAF50;">
-                👥 Хотите протестировать SURBENSKIY? 
-                <a href="#" style="color: #ffffff; background-color: #4CAF50; padding: 5px 15px; border-radius: 20px; text-decoration: none; margin-left: 10px;">
-                    ЗАЙТИ В ВК
-                </a>
-            </p>
+            
+            <a href="https://vk.com/club236789529" class="vk-link" target="_blank">
+                👥 Вступить в группу тестеров ВКонтакте
+            </a>
         </div>
     </section>
     
@@ -363,12 +401,15 @@
             <div class="footer-content">
                 <div class="copyright">🛡️ 2026 SURBENSKIY. Все права защищены.</div>
                 <div class="footer-links">
-                    <a href="#" target="_blank">ВКонтакте</a>
+                    <a href="https://vk.com/club236789529" target="_blank">ВКонтакте</a>
                     <a href="#">Telegram</a>
                 </div>
             </div>
             <p class="warning-text">
                 ⚠️ Версия 8.5 — пред-релиз. Возможны баги. Стабильный релиз 1.0 выйдет позже.
+            </p>
+            <p class="warning-text">
+                👥 Набор тестеров открыт! Присоединяйся к группе ВК.
             </p>
         </div>
     </footer>
